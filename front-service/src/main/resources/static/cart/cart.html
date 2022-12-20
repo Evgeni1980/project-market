@@ -1,0 +1,36 @@
+<script src="cart.js"></script>
+<div>
+    <p></p>
+    <h3>Корзина</h3>
+    <p></p>
+    <div ng-show="cart.items.length > 0">
+        <table class="table table-hover">
+            <tr>
+                <td>Название</td>
+                <td>Количество</td>
+                <td>Цена</td>
+                <td></td>
+            </tr>
+            <tbody>
+            <tr ng-repeat="item in cart.items">
+                <td>{{item.productTitle}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.priceProduct + ' x ' + item.quantity + ' = ' + item.price}}</td>
+                <td>
+                    <button type="button" class="btn btn-danger" ng-click="removeFromCart(item.productId)">Удалить</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Итого</td>
+                <td></td>
+                <td>{{cart.totalPrice}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-danger" ng-click="clearCart()">Очистить корзину</button>
+        <button type="button" class="btn btn-danger" ng-click="isUserLoggedIn()" ng-click="addOrder">Заказать</button>
+    </div>
+    <div ng-show="cart.items.length == 0">
+        <p>Корзина пуста</p>
+    </div>
+</div>

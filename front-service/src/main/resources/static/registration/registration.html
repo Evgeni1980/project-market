@@ -1,0 +1,25 @@
+<div>
+  <p></p>
+  <h3>Регистрация</h3>
+  <p></p>
+
+  <form novalidate ng-submit = "functionRegistration()">
+    <div class="from-floating input-group-sm">
+      <input type="text" class="from-control" id="userUsername" placeholder="" ng-model="reguser.username">
+      <label for="userUsername">Имя пользователя</label>
+    </div>
+    <p></p>
+    <div class="from-floating input-group-sm">
+      <input type="password" class="from-control" id="userPass" placeholder="" ng-model="reguser.password">
+      <label for="userPass">Пароль</label>
+    </div>
+    <p></p>
+    <div class="from-floating input-group-sm">
+      <input type="password" class="from-control" id="userConfirmPass" placeholder="" ng-model="reguser.confirmPassword">
+      <label for="userConfirmPass">Подтверждение пароля</label>
+    </div>
+    <p></p>
+    <button class="btn btn-outline-warning btn-sm" style="..." type="submit">Зарегистрироваться</button>
+  </form>
+</div>
+
